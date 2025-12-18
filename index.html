@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Humayra Afia Hany | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --bg: #0f172a;
+        --card: #111827;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #10b981;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: radial-gradient(circle at top, #1f2937, #020617);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 3rem 0 2rem;
+        border-bottom: 1px solid #1f2937;
+      }
+      @media (min-width: 768px) {
+        header {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .hero-left h1 {
+        font-size: clamp(2.2rem, 4vw, 3rem);
+        font-weight: 700;
+      }
+      .hero-tagline {
+        font-size: 0.95rem;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-top: 0.3rem;
+      }
+      .hero-summary {
+        margin-top: 0.6rem;
+        max-width: 32rem;
+        color: var(--muted);
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.2rem;
+      }
+      .btn {
+        padding: 0.55rem 1.1rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid transparent;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: var(--primary);
+        color: white;
+      }
+      .btn.secondary {
+        background: transparent;
+        border-color: #374151;
+        color: var(--muted);
+      }
+      .btn:hover {
+        background: var(--primary-dark);
+      }
+      .btn.secondary:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .hero-right {
+        text-align: left;
+      }
+      .hero-meta {
+        font-size: 0.9rem;
+        color: var(--muted);
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      .hero-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      section {
+        padding: 2.5rem 0;
+        border-bottom: 1px solid #111827;
+      }
+      section:last-of-type {
+        border-bottom: none;
+        padding-bottom: 3rem;
+      }
+      .section-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .pill {
+        font-size: 0.75rem;
+        padding: 0.15rem 0.6rem;
+        border-radius: 999px;
+        border: 1px solid #1f2937;
+        color: var(--muted);
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.2rem 2rem;
+      }
+      @media (min-width: 768px) {
+        .grid-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      .card {
+        background: rgba(15, 23, 42, 0.85);
+        border-radius: 0.75rem;
+        padding: 1rem 1.2rem;
+        border: 1px solid #1f2937;
+      }
+      .card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+      }
+      .card-sub {
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin-bottom: 0.4rem;
+      }
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+      }
+      .badge {
+        font-size: 0.78rem;
+        padding: 0.18rem 0.55rem;
+        border-radius: 999px;
+        background: #020617;
+        border: 1px solid #1f2937;
+        color: var(--muted);
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      li + li {
+        margin-top: 0.25rem;
+      }
+      .small-text {
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+      footer {
+        text-align: center;
+        padding: 1.5rem 0 2rem;
+        font-size: 0.8rem;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HERO -->
+      <header>
+        <div class="hero-left">
+          <h1>Humayra Afia Hany</h1>
+          <p class="hero-tagline">
+            Odoo Technical Developer · ML & Data Enthusiast · CS Undergrad
+          </p>
+          <p class="hero-summary">
+            I’m a Computer Science student with experience in Odoo technical
+            development, machine learning, data analysis, and web development. I
+            love solving real-world problems, collaborating in teams, and
+            continuously improving my skills.
+          </p>
+        </div>
+        <div class="hero-right">
+          <div class="hero-meta">
+            <span>📍 Tongi, Gazipur-1711</span>
+            <span>📞 <a href="tel:+8801778140896">+8801778140896</a></span>
+            <span
+              >📧
+              <a href="mailto:humayraafiahany@gmail.com"
+                >humayraafiahany@gmail.com</a
+              ></span
+            >
+          </div>
+        </div>
+      </header>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <h2 class="section-title">
+          About Me <span class="pill">Who I Am</span>
+        </h2>
+        <p class="small-text">
+          I am currently pursuing a Bachelor of Science in Computer Science at
+          Green University of Bangladesh with a current CGPA of 3.84. My
+          interests span Odoo development, backend systems, data analysis, and
+          machine learning. Alongside academics, I stay active in student
+          organizations, leadership activities, and tech communities.
+        </p>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education">
+        <h2 class="section-title">
+          Education <span class="pill">Academic Journey</span>
+        </h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Green University of Bangladesh</h3>
+            <div class="card-sub">
+              B.Sc. in Computer Science · Feb 2022 – Present · Dhaka, Bangladesh
+            </div>
+            <p class="small-text">Current CGPA: 3.84</p>
+            <div class="badge-row">
+              <span class="badge">Data Structures</span>
+              <span class="badge">Algorithms Analysis</span>
+              <span class="badge">DBMS</span>
+              <span class="badge">AI & ML</span>
+              <span class="badge">OOP</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Tamirul Millat Kamil Madrasah</h3>
+            <div class="card-sub">
+              Alim · Jul 2018 – Jun 2020 · Tongi, Gazipur
+            </div>
+            <p class="small-text">Result: A+ (All Subjects)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2 class="section-title">
+          Skills <span class="pill">What I Work With</span>
+        </h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Technical Skills</h3>
+            <ul class="small-text">
+              <li><strong>Languages:</strong> Python, C, JavaScript</li>
+              <li>
+                <strong>Web Dev:</strong> HTML, CSS, Django, Odoo, Tailwind,
+                Bootstrap
+              </li>
+              <li>
+                <strong>Data & ML:</strong> NumPy, Pandas, Matplotlib, Seaborn,
+                scikit-learn, PyTorch, Streamlit
+              </li>
+              <li><strong>Databases:</strong> MySQL, Oracle, PostgreSQL</li>
+              <li>
+                <strong>Tools:</strong> Git, GitHub, LaTeX, Canva, MS Word,
+                Excel, PowerPoint
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Soft Skills</h3>
+            <ul class="small-text">
+              <li>Time Management</li>
+              <li>Teamwork & Collaboration</li>
+              <li>Communication</li>
+              <li>Adaptability</li>
+              <li>Teaching & Knowledge Sharing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <h2 class="section-title">
+          Experience <span class="pill">Where I’ve Worked</span>
+        </h2>
+        <div class="card">
+          <h3>Odoo Developer</h3>
+          <div class="card-sub">SOFTEKO · Aug 2025 – Present</div>
+          <ul class="small-text">
+            <li>
+              Working on Odoo technical development and custom module
+              implementation.
+            </li>
+            <li>
+              Collaborating with a professional team to deliver ERP solutions.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top: 0.9rem">
+          <h3>Associate Public Relations Coordinator</h3>
+          <div class="card-sub">
+            Hult Prize at Green University of Bangladesh · Nov 2023 – Nov 2024
+          </div>
+          <ul class="small-text">
+            <li>
+              Worked on PR activities to promote Hult Prize programs on campus.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top: 0.9rem">
+          <h3>Coordinator</h3>
+          <div class="card-sub">
+            Green University Alumni Association of CSE (GRACE) · Feb 2024 –
+            Present
+          </div>
+          <ul class="small-text">
+            <li>
+              Coordinating events and initiatives that connect CSE alumni and
+              current students.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- RESEARCH -->
+      <section id="research">
+        <h2 class="section-title">
+          Research <span class="pill">NLP & ML</span>
+        </h2>
+        <div class="card">
+          <h3>
+            Accurate Detection of Fake Job Posts Using Ensemble ML & Explainable
+            AI
+          </h3>
+          <div class="card-sub">
+            Natural Language Processing · Sept 2025 · IEEE Standard Research
+            Paper
+          </div>
+          <ul class="small-text">
+            <li>Accepted to IDAA Conference.</li>
+            <li>
+              Contributed to methodology design and accuracy improvements for
+              detecting fake job posts.
+            </li>
+            <li>
+              Worked on explainable AI aspects to interpret model decisions.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- TRAININGS & AWARDS -->
+      <section id="trainings">
+        <h2 class="section-title">
+          Trainings & Awards <span class="pill">Growth & Recognition</span>
+        </h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Trainings</h3>
+            <ul class="small-text">
+              <li>Career Compass – Odoo Technical Development (GRACE)</li>
+              <li>CareerX 38 – Bangladesh Youth Leadership Center (BYLC)</li>
+              <li>Python Programming EDGE Course – GUB</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Certifications & Awards</h3>
+            <ul class="small-text">
+              <li>Master Academic Typesetting with LaTeX – Udemy</li>
+              <li>QBRONGE using Qiskit Diploma</li>
+              <li>Odoo Technical Development</li>
+              <li>Four consecutive VC Awards (1st–4th semester)</li>
+              <li>GUCC Primary Level Contest (Female Winner)</li>
+              <li>Government Merit Scholarship (Alim and Dakhil)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- LANGUAGES -->
+      <section id="languages">
+        <h2 class="section-title">
+          Languages <span class="pill">Communication</span>
+        </h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Bengali</h3>
+            <p class="small-text">
+              Mother tongue · Listening, Reading, Writing, Speaking
+            </p>
+          </div>
+          <div class="card">
+            <h3>English</h3>
+            <p class="small-text">Listening, Reading, Writing, Speaking</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2 class="section-title">
+          Contact & References <span class="pill">Let’s Connect</span>
+        </h2>
+        <div class="grid-2">
+          <div>
+            <p class="small-text">
+              📍 Tongi, Gazipur-1711<br />
+              📞 <a href="tel:+8801778140896">+8801778140896</a><br />
+              📧
+              <a href="mailto:humayraafiahany@gmail.com"
+                >humayraafiahany@gmail.com</a
+              ><br />
+              🐙
+              <a href="https://github.com/Aryamuh-ynah" target="_blank"
+                >github.com/Aryamuh-ynah</a
+              >
+            </p>
+          </div>
+          <div>
+            <p class="small-text">
+              <strong>References</strong><br />
+              Kaushik Ahmed Apu – Sr. Odoo Expert (HubXpert), Co-Founder
+              (FoneBox Inc.)<br />
+              A.N.M. Mohaimen Shanto – Project Manager, SOFTEKO
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>© <span id="year"></span> Humayra Afia Hany · Portfolio</footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
